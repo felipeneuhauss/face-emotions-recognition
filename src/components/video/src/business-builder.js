@@ -20,7 +20,6 @@ class BusinessBuilder {
   }
 
   _init() {
-    console.log('this.onExpressionRecognized', this.onExpressionRecognized)
     this.videoBuilder.createVideoElement({ muted: true })
     this.faceRecognition
       .setVideoContainer(this.videoBuilder.videoContainer)

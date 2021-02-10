@@ -12,13 +12,13 @@ const useStyles = makeStyles({
   }
 })
 
-const Video = () => {
+const Video = (props) => {
 
   const classes = useStyles()
 
   const updateFaceExpressionRecognized = () => {
-    return (expressions) => {
-      console.log('updateFaceExpressionRecognized', expressions)
+    return (analyses) => {
+      props.onExpressionVerified(analyses)
     }
   }
 
@@ -26,7 +26,7 @@ const Video = () => {
     const business = BusinessBuilder.initialize({
       onExpressionRecognized: updateFaceExpressionRecognized
     })
-  })
+  }, [])
 
   return (
     <div id="video-container" className={classes.videoContainer}>

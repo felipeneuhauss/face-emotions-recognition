@@ -13,7 +13,9 @@ class VideoBuilder {
     if (src) {
       this.videoElement.addEventListener('loadedmetadata', _ => this.videoElement.play())
     }
-    this.videoContainer.append(this.videoElement)
+    if (!this.videoContainer.childElementCount) {
+      this.videoContainer.append(this.videoElement)
+    }
 
     return this.videoElement
   }

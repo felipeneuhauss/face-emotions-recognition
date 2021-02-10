@@ -31,7 +31,6 @@ class FaceRecognitionBuilder {
   }
 
   processVideoExpressions () {
-    console.log('processVideoExpressions')
     const canvas = this.faceApi.createCanvasFromMedia(this.videoElement)
     this.videoContainer.append(canvas)
     const videoElementInfo = this.videoElement.getBoundingClientRect()
