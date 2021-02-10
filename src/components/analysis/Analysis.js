@@ -21,16 +21,15 @@ const useStyles = makeStyles({
 
 const Analysis = ({}) => {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <div>
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Word of the Day
+          Face recognition
         </Typography>
         <Typography variant="h5" component="h2">
-          be{bull}nev{bull}o{bull}lent
+          Metrics
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
           adjective
